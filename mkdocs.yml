@@ -1,0 +1,91 @@
+site_name: "FPGA Lab — Digital System Design"
+site_description: "FPGA Laboratory Sessions for Digital System Design — Digilent Basys 3 & AMD Vivado"
+site_author: "UCF Department of ECE"
+site_url: "https://srn-research-hub.github.io/fpga-lab/"
+repo_url: "https://github.com/srn-research-hub/fpga-lab"
+repo_name: "srn-research-hub/fpga-lab"
+
+theme:
+  name: material
+  custom_dir: docs/overrides
+  palette:
+    - scheme: slate
+      primary: custom
+      accent: amber
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+    - scheme: default
+      primary: custom
+      accent: amber
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+  font:
+    text: Source Sans 3
+    code: JetBrains Mono
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.tracking
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __codelineno
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.details
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+extra_css:
+  - overrides/extra.css
+
+nav:
+  - Home: index.md
+  - Getting Started:
+      - Overview: getting-started/index.md
+      - Vivado Setup: getting-started/vivado-setup.md
+      - Basys 3 Hardware Guide: getting-started/basys3-guide.md
+      - Master XDC Constraints: getting-started/xdc-master.md
+  - Labs:
+      - Overview: labs/index.md
+      - Lab 1 - Combinational Logic: labs/lab1.md
+      - Lab 2 - Sequential Logic & Clocks: labs/lab2.md
+      - Lab 3 - FSMs & Debouncing: labs/lab3.md
+      - Lab 4 - Memory & 7-Segment Displays: labs/lab4.md
+      - Lab 5 - UART Communication: labs/lab5.md
+  - Final Project:
+      - Overview & Requirements: project/index.md
+      - Project Ideas & Scaffolds: project/project-ideas.md
+      - Grading Rubric: project/rubric.md
+  - References:
+      - Overview: references/index.md
+      - Verilog HDL Cheat Sheet: references/verilog-cheatsheet.md
+      - Vivado Tips & Simulation: references/vivado-tips.md
+      - Common Troubleshooting: references/troubleshooting.md

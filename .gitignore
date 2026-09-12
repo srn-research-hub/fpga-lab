@@ -1,0 +1,12 @@
+# Python Virtual Environment
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# MkDocs generated site
+site/
+
+# OS files
+.DS_Store
+Thumbs.db
